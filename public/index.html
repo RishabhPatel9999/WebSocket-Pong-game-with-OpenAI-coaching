@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pong — Secure WS + MessagePack</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Pong — Secure Live Commentary (MessagePack + Redis)</h1>
+
+    <div style="margin-bottom:8px;">
+      <label>JWT token: <input id="tokenInput" style="width:420px" placeholder="Paste JWT token"></label>
+      <button id="connectBtn">Connect WS</button>
+      <button id="getTokenBtn">Get Token (dev)</button>
+    </div>
+
+    <div class="game-row">
+      <canvas id="game" width="800" height="500"></canvas>
+      <div class="panel">
+        <div class="scoreboard">
+          <div>Player: <span id="playerScore">0</span></div>
+          <div>Computer: <span id="aiScore">0</span></div>
+        </div>
+        <div class="commentary" id="commentary">Not connected</div>
+        <div style="margin-top:8px;display:flex;gap:8px;justify-content:center;">
+          <button id="toggleCoach">Enable Coach</button>
+          <button id="muteTts">Mute TTS</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="info">
+      <p>Controls: Move mouse over the canvas or use Arrow Up / Down. Click to start/serve/pause.</p>
+    </div>
+  </div>
+
+  <!-- MessagePack client (browser) -->
+  <script src="https://unpkg.com/@msgpack/msgpack/dist/msgpack.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
