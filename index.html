@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pong + Live OpenAI Commentary</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Pong — Live Commentary</h1>
+    <div class="game-row">
+      <canvas id="game" width="800" height="500"></canvas>
+      <div class="panel">
+        <div class="scoreboard">
+          <div>Player: <span id="playerScore">0</span></div>
+          <div>Computer: <span id="aiScore">0</span></div>
+        </div>
+        <div class="commentary" id="commentary">Commentary will appear here. Click the canvas to start.</div>
+        <div class="controls">
+          <button id="muteTts">Mute TTS</button>
+        </div>
+      </div>
+    </div>
+    <div class="info">
+      <p>Controls: Move mouse over the canvas or use Arrow Up / Down. Click to start/serve/pause.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
